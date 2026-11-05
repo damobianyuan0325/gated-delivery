@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+SKILL_REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$SKILL_REPO_ROOT"
+git diff --quiet
+git diff --cached --quiet
+if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+  echo "Untracked non-ignored files exist; publish an explicit reviewed tree." >&2
+  exit 1
+fi
+python3 scripts/check_repo.py --tracked
+python3 -m unittest discover -s tests -v
