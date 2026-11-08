@@ -1,13 +1,13 @@
 ---
 name: gated-delivery
 metadata:
-  version: "2.3.1"
+  version: "2.3.2"
 description: 把明确开发目标变成有限、可验收的功能包，在授权内连续实现、验证、修复和交付。适用于多功能交付、缺陷闭环及中断续做；普通问答、简单编辑不自动升级为完整流程或生产操作。
 ---
 
 # 验证驱动交付
 
-2.3.1。方法见[设计原则](references/design-principles.md)；版本说明见[变更记录](CHANGELOG.md)，按需读取。仓库候选、已安装和实际运行版本分别记录，不冒称已发布。
+2.3.2。方法见[设计原则](references/design-principles.md)；版本说明见[变更记录](CHANGELOG.md)，按需读取。仓库候选、已安装和实际运行版本分别记录，不冒称已发布。
 
 先理解用户目标并直接推进可交付结果。重要业务选择由任务责任人决定；自动检查提供可复核的事实，不能代替对业务结果的判断。
 
@@ -54,7 +54,7 @@ description: 把明确开发目标变成有限、可验收的功能包，在授�
 | 外部字段、来源、Provider 或回退 | [外部证据](references/external-evidence.md) |
 | 页面、Origin/代理、时间单位和标签 | [Web 与时间](references/web-and-time.md) |
 | SQL、约束、缓存、并发锁、数值或大 JSON | [持久化与 SQL](references/storage-and-sql.md) |
-| 异步触发、队列、重复/补发、期限与外发 | [异步运行](references/async-runtime.md) |
+| 异步触发、持续容量、队列、退出清理、期限与外发 | [异步运行](references/async-runtime.md) |
 | 复制、发布、配置、进程与恢复 | [发布与恢复](references/release-and-recovery.md) |
 | 金融/资源额度、持仓、补偿或正式运行身份 | [策略与资金](references/strategy-and-funds.md) |
 | 已修/已验后同条件再发现缺陷 | [失败与漏检复盘](references/failure-and-recheck.md) |
